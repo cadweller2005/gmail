@@ -1,0 +1,5 @@
+categories/Major.class
+pageobjects/Base.class
+tests/TestLogin.class
+categories/Critical.class
+pageobjects/Login.class

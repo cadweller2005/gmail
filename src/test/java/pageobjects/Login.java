@@ -15,7 +15,8 @@ public class Login {
     By passwordLocator = By.id("Passwd");
     By signInButton = By.id("signIn");
     By verifyLoginPageLocator = By.id(":2m");
-    By clickOnAccountButton = By.cssSelector(".gb_0a.gbii");
+    //By clickOnAccountButton = By.cssSelector(".gb_1a.gbii");
+    By clickOnAccountButton = By.xpath("//a [@href='https://accounts.google.com/SignOutOptions?hl=en&continue=https://mail.google.com/mail&service=mail']");
     By clickOnSignOut = By.id("gb_71");
     By verifyLoggedOutLocator = By.cssSelector(".logo-strip");
     By clickOnCompose = By.cssSelector("div[role='button'][gh='cm']");

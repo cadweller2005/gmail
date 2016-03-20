@@ -1,8 +1,11 @@
 package tests;
 
+import categories.Critical;
+import categories.Major;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -19,10 +22,11 @@ public class TestLogin {
     public void SetUp() {
         driver = new FirefoxDriver();
         login = new Login(driver);
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
     }
 
+    @Category({Critical.class})
     @Test
     public void succesfullLogin() {
         login.with("seleniummz@gmail.com","seleniummz12345");
@@ -33,6 +37,7 @@ public class TestLogin {
                 login.verifyLoggedOut());
     }
 
+    @Category({Major.class})
     @Test
     public void succesfullSendAndReceive() {
         login.with("seleniummz@gmail.com","seleniummz12345");
